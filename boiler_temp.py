@@ -36,7 +36,7 @@ def get_data():
 
     text = response.text
 
-    temp = re.search('(temp:)(\d+\.\d+)(C)', text)
+    temp = re.search('(temp:)(\d+\.?\d+?)(C)', text)
 
     temp = float(temp.group(2))
     
